@@ -256,7 +256,7 @@ void WiFiManager::_end(){
 // AUTOCONNECT
 
 boolean WiFiManager::autoConnect() {
-  String ssid = "REDCUMBRE" + getDefaultAPName();
+  String ssid = "REDCUMBRE " + getDefaultAPName();
   return autoConnect(ssid.c_str(), NULL);
 }
 
