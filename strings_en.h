@@ -37,7 +37,7 @@ const char * const HTTP_PORTAL_MENU[] PROGMEM = {
 "<form action='/wifi'    method='get'><button>Configure WiFi</button></form><br/>\n", // MENU_WIFI
 "<form action='/0wifi'   method='get'><button>Configure WiFi (No Scan)</button></form><br/>\n", // MENU_WIFINOSCAN
 "<form action='/info'    method='get'><button>Info</button></form><br/>\n", // MENU_INFO
-"<form action='/param'   method='get'><button>Configurara</button></form><br/>\n",//MENU_PARAM
+"<form action='/param'   method='get'><button>Configurarar</button></form><br/>\n",//MENU_PARAM
 "<form action='/close'   method='get'><button>Cerrar</button></form><br/>\n", // MENU_CLOSE
 "<form action='/restart' method='get'><button>Resetear de fabrica</button></form><br/>\n",// MENU_RESTART
 "<form action='/exit'    method='get'><button>Salir</button></form><br/>\n",  // MENU_EXIT
