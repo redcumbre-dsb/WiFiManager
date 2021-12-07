@@ -39,7 +39,7 @@ const char * const HTTP_PORTAL_MENU[] PROGMEM = {
 "<form action='/info'    method='get'><button>Info</button></form><br/>\n", // MENU_INFO
 "<form action='/param'   method='get'><button>Configurarar</button></form><br/>\n",//MENU_PARAM
 "<form action='/close'   method='get'><button>Cerrar</button></form><br/>\n", // MENU_CLOSE
-"<form action='/restart' method='get'><button>Resetear de fabrica</button></form><br/>\n",// MENU_RESTART
+"<form action='/restart' method='get'><button>REINICIAR</button></form><br/>\n",// MENU_RESTART
 "<form action='/exit'    method='get'><button>Salir</button></form><br/>\n",  // MENU_EXIT
 "<form action='/erase'   method='get'><button class='D'>Borrar</button></form><br/>\n", // MENU_ERASE
 "<form action='/update'  method='get'><button>Update</button></form><br/>\n",// MENU_UPDATE
@@ -64,7 +64,7 @@ const char HTTP_FORM_PARAM[]       PROGMEM = "<br/><input id='{i}' name='{n}' ma
 
 const char HTTP_SCAN_LINK[]        PROGMEM = "<br/><form action='/wifi?refresh=1' method='POST'><button name='refresh' value='1'>Refresh</button></form>";
 const char HTTP_SAVED[]            PROGMEM = "<div class='msg'>Saving Credentials<br/>Trying to connect ESP to network.<br />If it fails reconnect to AP to try again</div>";
-const char HTTP_PARAMSAVED[]       PROGMEM = "<div class='msg S'>Saved<br/></div>";
+const char HTTP_PARAMSAVED[]       PROGMEM = "<div class='msg S'>Guardado<br/></div>";
 const char HTTP_END[]              PROGMEM = "</div></body></html>";
 const char HTTP_ERASEBTN[]         PROGMEM = "<br/><form action='/erase' method='get'><button class='D'>Erase WiFi Config</button></form>";
 const char HTTP_UPDATEBTN[]        PROGMEM = "<br/><form action='/update' method='get'><button>Update</button></form>";
