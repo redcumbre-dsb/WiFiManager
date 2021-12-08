@@ -225,6 +225,9 @@ class WiFiManager
 
     //called when settings reset have been triggered
     void          setConfigResetCallback( std::function<void()> func );
+    
+    //called when settings borrarMemoria have been triggered
+    void          setDsbBorrarCallback( std::function<void()> func );    
 
     //called when wifi settings have been changed and connection was successful ( or setBreakAfterConfig(true) )
     void          setSaveConfigCallback( std::function<void()> func );

@@ -2165,6 +2165,7 @@ void WiFiManager::handleErase(boolean opt) {
   #ifdef WM_DEBUG_LEVEL
   DEBUG_WM(DEBUG_NOTIFY,F("<- HTTP Erase"));
   #endif
+  _borrarMemoria();
   handleRequest();
   String page = getHTTPHead(FPSTR(S_titleerase)); // @token titleerase
 
@@ -2615,6 +2616,15 @@ void WiFiManager::setSaveConfigCallback( std::function<void()> func ) {
  */
 void WiFiManager::setConfigResetCallback( std::function<void()> func ) {
     _resetcallback = func;
+}
+
+/**
+ * setDsbBorrarCallback, set a callback to occur when a borrarMemoria() occurs
+ * @access public
+ * @param {[type]} void(*func)(void)
+ */
+void WiFiManager::setDsbBorrarCallback( std::function<void()> func ) {
+    _borrarMemoria = func;
 }
 
 /**
