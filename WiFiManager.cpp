@@ -11,7 +11,6 @@
  */
 
 #include "WiFiManager.h"
-Preferences prefs;
 
 #if defined(ESP8266) || defined(ESP32)
 
@@ -2410,10 +2409,7 @@ bool WiFiManager::erase(bool opt){
 
   #ifdef WM_DEBUG_LEVEL
   DEBUG_WM(F("Erasing WiFi Config"));
-  DEBUG_WM(F("Erasing prefs Config"));
-  prefs.begin("m_config"); // Name space m_config
-  prefs.clear();   
-  DEBUG_WM(F("prefs Borrada"));
+  
   #endif
   return WiFi_eraseConfig();
 }
