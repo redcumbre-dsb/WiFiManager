@@ -11,8 +11,6 @@
  */
 
 #include "WiFiManager.h"
-#include "Preferences.h"
-
 Preferences prefs;
 
 #if defined(ESP8266) || defined(ESP32)
