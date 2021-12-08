@@ -2380,6 +2380,12 @@ bool WiFiManager::erase(bool opt){
       DEBUG_WM(DEBUG_VERBOSE,F("nvs_flash_init: "),err!=ESP_OK ? (String)err : "Success");
       #endif
       err = nvs_flash_erase();
+      log_d("Deleting config");
+      configuration_t configuration_i[1];
+
+      prefs.begin("m_config"); // Name space m_config
+    
+      prefs.clear();      
       #ifdef WM_DEBUG_LEVEL
       DEBUG_WM(DEBUG_VERBOSE,F("nvs_flash_erase: "), err!=ESP_OK ? (String)err : "Success");
       #endif
