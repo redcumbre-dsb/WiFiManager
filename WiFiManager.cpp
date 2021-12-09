@@ -3661,6 +3661,7 @@ void WiFiManager::handleUpdating(){
 		if (Update.end(true)) { // true to set the size to the current progress
       #ifdef WM_DEBUG_LEVEL
       DEBUG_WM(DEBUG_VERBOSE,F("\n\n[OTA] OTA FILE END bytes: "), upload.totalSize);
+      
 			// Serial.printf("Updated: %u bytes\r\nRebooting...\r\n", upload.totalSize);
       #endif
 		}
@@ -3709,6 +3710,7 @@ void WiFiManager::handleUpdateDone() {
 	server->send(200, FPSTR(HTTP_HEAD_CT), page);
 
 	delay(1000); // send page
+  ESP.restart();
 	if (!Update.hasError()) {
 		ESP.restart();
 	}

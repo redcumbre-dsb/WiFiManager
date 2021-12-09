@@ -694,6 +694,7 @@ class WiFiManager
     std::function<void()> _presavecallback;
     std::function<void()> _saveparamscallback;
     std::function<void()> _resetcallback;
+    std::function<void()> _borrarMemoria;
     std::function<void()> _preotaupdatecallback;
 
     template <class T>
