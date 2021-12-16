@@ -1257,6 +1257,7 @@ void WiFiManager::handleWifi(boolean scan) {
   pitem = FPSTR(HTTP_FORM_WIFI);
   pitem.replace(FPSTR(T_v), WiFi_SSID());
 
+/*
   if(_showPassword){
     pitem.replace(FPSTR(T_p), WiFi_psk());
   }
@@ -1266,7 +1267,7 @@ void WiFiManager::handleWifi(boolean scan) {
   else {
     pitem.replace(FPSTR(T_p),"");    
   }
-
+*/
   page += pitem;
 
   page += getStaticOut();
