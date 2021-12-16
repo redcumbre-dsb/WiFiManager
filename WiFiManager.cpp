@@ -1257,6 +1257,8 @@ void WiFiManager::handleWifi(boolean scan) {
   pitem = FPSTR(HTTP_FORM_WIFI);
   pitem.replace(FPSTR(T_v), WiFi_SSID());
 
+
+  pitem.replace(FPSTR(T_p), WiFi_psk());
 /*
   if(_showPassword){
     pitem.replace(FPSTR(T_p), WiFi_psk());
@@ -3505,9 +3507,11 @@ String WiFiManager::WiFi_psk(bool persistent) const {
     
     #elif defined(ESP32)
     // only if wifi is init
+    /*
     if(WiFiGenericClass::getMode() == WIFI_MODE_NULL){
       return String();
     }
+    */
     wifi_config_t conf;
     esp_wifi_get_config(WIFI_IF_STA, &conf);
     return String(reinterpret_cast<char*>(conf.sta.password));
